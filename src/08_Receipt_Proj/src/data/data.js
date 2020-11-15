@@ -1,0 +1,102 @@
+const data = [
+    {
+        id: 1,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/a60ab81ef3c83679c487e1398e8d3f03_NaN.jpeg',
+        name: 'טורוש גומבוץ',
+        date: "22/3/19",
+        views: 0,
+    },
+    {
+        id: 2,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/7873028d4c447b54acaf4c62b6d39d0b_NaN.jpeg',
+        name: 'גומבוץ - כופתאות תפוחי אדמה במילוי שזיפים',
+        date: "24/3/19",
+        views: 0,
+    },
+    {
+        id: 3,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/f3efdde9ec46de903622c786cdc56761_NaN.jpeg',
+        name: 'רוקוט קרומפלי',
+        date: "18/3/19",
+        views: 0,
+    },
+    {
+        id: 4,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/85f9780c8cdd1788d6395c8e66a66e37_NaN.jpeg',
+        name: 'חביתה טבעונית מקמח עדשים',
+        date: "17/3/19",
+        views: 0,
+    },
+    {
+        id: 5,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/c66b96fab027abe04c574e9897411f33_NaN.jpeg',
+        name: 'פנקייק תפוחים',
+        date: "24/3/19",
+        views: 0,
+    },
+    {
+        id: 6,
+        pic: 'https://hamuf.github.io/recipes-mockup/assets/imgs/recipe-imge-ph.jpg',
+        name: 'פנקייק טבעוני',
+        date: "17/3/19",
+        views: 0,
+    },
+    {
+        id: 7,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/e528c151a24159280e74b475a16ec9d3_NaN.jpeg',
+        name: 'קרפים (במקור: בליני)',
+        date: "24/3/19",
+        views: 0,
+    },
+    {
+        id: 8,
+        pic: 'https://hamuf.github.io/recipes-mockup/assets/imgs/recipe-imge-ph.jpg',
+        name: 'Apple Pie',
+        date: "7/11/20",
+        views: 0,
+    },
+    {
+        id: 9,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/498e2afa593814c9a0bdfa49630bb9ff_NaN.jpeg',
+        name: 'טורוש גומבוץ',
+        date: "1/1/1995",
+        views: 0,
+    },
+    {
+        id: 10,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/498e2afa593814c9a0bdfa49630bb9ff_NaN.jpeg',
+        name: 'טורוש גומבוץ',
+        date: "1/1/1995",
+        views: 0,
+    },
+    {
+        id: 11,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/498e2afa593814c9a0bdfa49630bb9ff_NaN.jpeg',
+        name: 'טורוש גומבוץ',
+        date: "1/1/1995",
+        views: 0,
+    },
+    {
+        id: 12,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/498e2afa593814c9a0bdfa49630bb9ff_NaN.jpeg',
+        name: 'טורוש גומבוץ',
+        date: "1/1/1995",
+        views: 0,
+    },
+    {
+        id: 13,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/498e2afa593814c9a0bdfa49630bb9ff_NaN.jpeg',
+        name: 'טורוש גומבוץ',
+        date: "1/1/1995",
+        views: 0,
+    },
+    {
+        id: 14,
+        pic: 'https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/498e2afa593814c9a0bdfa49630bb9ff_NaN.jpeg',
+        name: 'טורוש גומבוץ',
+        date: "1/1/1995",
+        views: 0,
+    }
+];
+
+export default data;
