@@ -1,12 +1,13 @@
 import React from 'react';
-import NavbarExternal from './NavbarExternal';
+// import NavbarInternal from './NavbarInternal';
 
 const ReceiptFilter = () => {
     return (
-        <>
-            <div className="container-fluid">
-                {/* <NavbarExternal /> */}
-            </div>
+        // <>
+        <div className="container-fluid">
+            {/* <NavbarInternal /> */}
+
+            <div className="row"><p style={{ height: "100px" }}></p></div>
             <div dir="rtl" id="main" className="container mt-3">
                 <ng-view className="container mt-3">
                     <div className="row ng-scope">
@@ -25,7 +26,7 @@ const ReceiptFilter = () => {
                             </div>
                             <div className="form-check-inline">
                                 <label className="form-check-label">
-                                    <input type="radio" />
+                                    <input type="radio" defaultChecked={true}/>
                                     הכי חדשים
                                 </label>
                             </div>
@@ -40,7 +41,7 @@ const ReceiptFilter = () => {
                             <div className="form-check">
                                 <div className="form-row container">
                                     <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
-                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet0" ng-model="dietTypes[idx]" />
+                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet0" ng-model="dietTypes[idx]"defaultChecked={true} />
                                         <label className="form-check-label ng-binding" htmlFor="diet0">טבעוני </label>
                                     </div>
                                     <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
@@ -48,7 +49,7 @@ const ReceiptFilter = () => {
                                         <label className="form-check-label ng-binding" htmlFor="diet1">ללא גלוטן </label>
                                     </div>
                                     <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
-                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet2" ng-model="dietTypes[idx]" />
+                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet2" ng-model="dietTypes[idx]"defaultChecked={true} />
                                         <label className="form-check-label ng-binding" htmlFor="diet2">כשר </label>
                                     </div>
                                     <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
@@ -56,15 +57,15 @@ const ReceiptFilter = () => {
                                         <label className="form-check-label ng-binding" htmlFor="diet3">ללא לקטוז</label>
                                     </div>
                                     <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
-                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet4" ng-model="dietTypes[idx]" />
+                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet4" ng-model="dietTypes[idx]"defaultChecked={true} />
                                         <label className="form-check-label ng-binding" htmlFor="diet4">פרווה</label>
                                     </div>
                                     <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
-                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet5" ng-model="dietTypes[idx]" />
+                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet5" ng-model="dietTypes[idx]" defaultChecked={true} />
                                         <label className="form-check-label ng-binding" htmlFor="diet5">פליאו</label>
                                     </div>
                                     <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
-                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet6" ng-model="dietTypes[idx]" />
+                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet6" ng-model="dietTypes[idx]"defaultChecked={true} />
                                         <label className="form-check-label ng-binding" htmlFor="diet6">קטגוני</label>
                                     </div>
                                     <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
@@ -72,7 +73,7 @@ const ReceiptFilter = () => {
                                         <label className="form-check-label ng-binding" htmlFor="diet7">צמחוני</label>
                                     </div>
                                     <div className="col-lg-4 col-md-4 col-6" ng-show="isShowDiet(dietTypes[idx])">
-                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet8" ng-model="dietTypes[idx]" />
+                                        <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet8" ng-model="dietTypes[idx]"/>
                                         <label className="form-check-label ng-binding" htmlFor="diet8">רואו</label>
                                     </div>
                                 </div>
@@ -115,7 +116,7 @@ const ReceiptFilter = () => {
                         </div>
                         <div className="form-check-inline">
                             <label className="form-check-label">
-                                <input type="radio" className="form-check-input ng-pristine ng-untouched ng-valid ng-not-empty" name="multipleIng" ng-model="isAll" ng-value="false" value="false" />לפחות אחד
+                                <input type="radio" className="form-check-input ng-pristine ng-untouched ng-valid ng-not-empty" name="multipleIng" ng-model="isAll" ng-value="false" value="false" defaultChecked={true}/>לפחות אחד
                             </label>
                         </div>
                     </div>
@@ -126,8 +127,9 @@ const ReceiptFilter = () => {
                 </div>
 
             </div>
-            <div className="footer"><footer className="footer-stl"><p style={{ height: "400px" }}></p></footer></div>
-        </>
+            <div className="row"><p style={{ height: "290px" }}></p></div>
+            {/* </> */}
+        </div>
     );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarExternal from './NavbarExternal';
+// import NavbarExternal from './NavbarExternal';
 
 const ReceiptSearch = () => {
     return (

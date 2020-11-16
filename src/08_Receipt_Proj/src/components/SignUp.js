@@ -1,13 +1,23 @@
 import React from 'react';
 import '../../../App.css';
+import NavbarExternal from '../components/NavbarExternal';
+import { useParams, useHistory } from "react-router-dom";
 
 const SignUp = () => {
+    const history = useHistory();
+    
+    const goToAllReceiptsMy = () => {
+        history.push("/mainLogedIn");
+    };
+
     return (
         <>
             <div className="container-fluid" dir="rtl">
+            <NavbarExternal />
+                <div className="row"><p style={{ height: "80px" }}></p></div>
                 <div className="row">
-                    <div className="col-md-6"></div>
-                    <div className="col-md">
+                    <div className="col-md-2"></div>
+                    <div className="col-md-7">
                         <h1 className="display-5 text-right">רישום למחברת המתכונים</h1>
                         <div className="form-group form-row text-right">
                             <label htmlFor="nickname" className="col-md-2">שם משתמש</label>
@@ -17,10 +27,10 @@ const SignUp = () => {
                             <label htmlFor="email" className="col-md-2">אי-מייל</label>
                             <input type="text" className="form-control col-md-4" placeholder="כתובת מייל שנמצאת" aria-label="Recipient's email" aria-describedby="basic-addon2" required=""></input>
                         </div>
-                        <div className="form-group form-row text-right">
+                        <div className="form-group form-row text-right ng-valid ng-valid-email" id="loginForm">
                             <label htmlFor="passwrd" className="col-md-2">סיסמה</label>
-                            <input type="text" className="form-control col-md-4" aria-label="Recipient's password" aria-describedby="basic-addon2" required=""></input>
-                            <small id="emailHelp" className="text-right" style={{ color: "#000000" }}>
+                            <input type="password" className="form-control col-md-4 ng-valid ng-valid-email" aria-label="Recipient's password" aria-describedby="basic-addon2" required="" id="exampleInputPassword1" id="pwd"/>
+                            <small id="emailHelp" className="text-right">
                                 <strong>
                                     דרישות מינימום לסיסמא תקינה: לפחות ספרה,
                                     אות קטנה ואות גדולה (באנגלית). ולא פחות מ-8 תווים
@@ -31,7 +41,7 @@ const SignUp = () => {
                             <label htmlFor="passwrd" className="col-md-2">אימות סיסמה</label>
                             <input type="text" className="form-control col-md-4" aria-label="Recipient's password" aria-describedby="basic-addon2" required=""></input>
                             <div className="col-md-10 text-right">
-                                <small id="emailHelp" className="text-right" style={{ color: "#000000" }}>
+                                <small id="emailHelp" className="text-right">
                                     <strong>
                                         תוכן השדה יהיה זהה לתוכן שהוקלד עבור הסיסמה
                                 </strong>
@@ -83,11 +93,13 @@ const SignUp = () => {
                                 </div>
                             </checkbox-list>
                         </div>
-                        <div class="row text-right">
-                            <button type="button" className="btn btn-primary">רישום</button>
-                            <a class="form-control alert alert-info ng-binding" role="alert">
-                                לפני שליחת הטופס יש למלא בצורה תקינה את השדות
-                            </a>
+                        <div className="row text-right">
+                            <div className="col-8">
+                                <button type="button" className="btn btn-primary" style={{ padding: "10px 20px" }} onClick={goToAllReceiptsMy}>רישום</button>
+                                <a className="alert alert-info ng-binding" role="alert">
+                                    לפני שליחת הטופס יש למלא בצורה תקינה את השדות
+                                </a>
+                            </div>
                         </div>
                         {/* <div class="form-group form-row">
                             <div class="float-left">
@@ -103,7 +115,7 @@ const SignUp = () => {
                     </div>
                     <div className="col-md-1"></div>
                 </div>
-                <div className="footer"><footer className="footer-stl"><p style={{ height: "300px" }}></p></footer></div>
+                <div className="row"><p style={{ height: "135px" }}></p></div>
                 {/* <div className="jumbotron container-fluid" style={{ backgroundcolor: "nocolor" }}></div> */}
                 {/* <div className="jumbotron container-fluid"></div> */}
             </div>

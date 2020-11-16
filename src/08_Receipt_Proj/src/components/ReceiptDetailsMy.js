@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useParams, useHistory } from "react-router-dom";
 import NavbarExternal from './NavbarExternal';
 
-const ReceiptDetails = () => {
+const ReceiptDetailsMy = () => {
 
     const history = useHistory();
 
-    const goToAllReceipts = () => {
-        history.push("/mainNotLogedIn");
+    const goToAllReceiptsMy = () => {
+        history.push("/mainLogedIn");
     };
 
     return (
@@ -200,7 +200,7 @@ const ReceiptDetails = () => {
                     </ul>
                 </div>
                 <div className="row text-left float-left">
-                    <button type="button" className="btn btn-primary" onClick={goToAllReceipts}>בחזרה לרשימה</button>
+                    <button type="button" className="btn btn-primary" onClick={goToAllReceiptsMy}>בחזרה לרשימה</button>
                 </div>
                 <hr />
             </div>
@@ -209,4 +209,4 @@ const ReceiptDetails = () => {
     );
 }
 
-export default ReceiptDetails;
+export default ReceiptDetailsMy;

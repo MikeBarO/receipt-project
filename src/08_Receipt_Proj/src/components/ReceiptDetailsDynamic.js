@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
 import { useParams, useHistory } from "react-router-dom";
-import NavbarExternal from './NavbarExternal';
 
-const ReceiptDetails = () => {
+const ReceiptDetailsDynamic = (props) => {
 
     const history = useHistory();
 
-    const goToAllReceipts = () => {
+    const goToAllReceiptsMy = () => {
         history.push("/mainNotLogedIn");
     };
 
     return (
         <>
             <div dir="rtl" className="container text-right">
-                {/* <NavbarExternal /> */}
                 <h1 className="text-right">חביתה טבעונית מקמח עדשים</h1>
                 <div className="row">
                     <div className="col-md-5">
-                        <img className="card-img-top" ng-src="https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/85f9780c8cdd1788d6395c8e66a66e37_NaN.jpeg" alt="חביתה טבעונית מקמח עדשים" src="https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/85f9780c8cdd1788d6395c8e66a66e37_NaN.jpeg" />
+                        <img className="card-img-top" ng-src="https://parsefiles.back4app.com/Ubmbhqz8eIdPXGrtk00xDzb9xm9nJHfkf8mtsGyZ/85f9780c8cdd1788d6395c8e66a66e37_NaN.jpeg" alt={props.name} src={props.card.pic} />
                     </div>
                     <div className="col-md-7">
                         <div className="row">
@@ -200,13 +198,13 @@ const ReceiptDetails = () => {
                     </ul>
                 </div>
                 <div className="row text-left float-left">
-                    <button type="button" className="btn btn-primary" onClick={goToAllReceipts}>בחזרה לרשימה</button>
+                    <button type="button" className="btn btn-primary" onClick={goToAllReceiptsMy}>בחזרה לרשימה</button>
                 </div>
-                <hr />
+                <hr/>
             </div>
             <div className="row"><p style={{ height: "40px" }}></p></div>
         </>
     );
 }
 
-export default ReceiptDetails;
+export default ReceiptDetailsDynamic;

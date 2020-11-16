@@ -4,7 +4,7 @@ import ReceiptSearch from './ReceiptSearch';
 import ReceiptCardMy from './ReceiptCardMy';
 import data from '../data/data';
 
-const ReceiptsListMy = () => {
+const AllReceiptsMy = () => {
     const [cardsInfo, setCardsInfo] = useState(data.sort((user1, user2) => user2.views - user1.views));
 
     const changeView = (cardId) => {
@@ -44,4 +44,4 @@ const ReceiptsListMy = () => {
     );
 }
 
-export default ReceiptsListMy;
+export default AllReceiptsMy;

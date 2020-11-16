@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://cdn3.f-cdn.com/contestentries/955165/23527868/58a80e44c4d39_thumb900.jpg');
+  /* background-image: url('https://cdn3.f-cdn.com/contestentries/955165/23527868/58a80e44c4d39_thumb900.jpg'); */
+  background-image: url('./08_Receipt_Proj/src/images/back_Onion.jpg');
+  /* background-image: url('./08_Receipt_Proj/src/images/back_Tomatoes.jpg'); */
   /* background-size: 23rem; */
    background-size: cover;
   /* background-repeat: repeat; */

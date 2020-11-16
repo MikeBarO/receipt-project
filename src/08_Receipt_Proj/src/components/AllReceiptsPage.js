@@ -4,7 +4,7 @@ import ReceiptSearch from './ReceiptSearch';
 import ReceiptCard from './ReceiptCard';
 import data from '../data/data';
 
-const ReceiptsList = () => {
+const AllReceiptsPage = () => {
     const [cardsInfo, setCardsInfo] = useState(data.sort((user1, user2) => user2.views - user1.views));
 
     const changeView = (cardId) => {
@@ -26,9 +26,9 @@ const ReceiptsList = () => {
     return (
         <>
             <div className="main">
-                <div className="container-fluid">
+                {/* <div className="container-fluid">
                     <LogInForm />
-                </div>
+                </div> */}
                 <div className="container">
                     <div className='row'>
                         <ReceiptSearch />
@@ -47,4 +47,4 @@ const ReceiptsList = () => {
     );
 }
 
-export default ReceiptsList;
+export default AllReceiptsPage;
