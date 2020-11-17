@@ -1,20 +1,19 @@
 import React from 'react';
 import '../../../App.css';
-import NavbarInternal from '../components/NavbarInternal';
+import NavbarExternal from '../components/NavbarExternal';
 import { useParams, useHistory } from "react-router-dom";
 
 const SignUp = () => {
-
     const history = useHistory();
-
-    const goToAllReceiptsMy = () => {
+    
+    const goToAllRecipesMy = () => {
         history.push("/mainLogedIn");
     };
 
     return (
         <>
             <div className="container-fluid" dir="rtl">
-                <NavbarInternal />
+            <NavbarExternal />
                 <div className="row"><p style={{ height: "80px" }}></p></div>
                 <div className="row">
                     <div className="col-md-2"></div>
@@ -22,15 +21,15 @@ const SignUp = () => {
                         <h1 className="display-5 text-right">רישום למחברת המתכונים</h1>
                         <div className="form-group form-row text-right">
                             <label htmlFor="nickname" className="col-md-2">שם משתמש</label>
-                            <input type="text" className="form-control col-md-4" placeholder="מיכאל בר און" aria-label="Recipient's username" aria-describedby="basic-addon2" required=""></input>
+                            <input type="text" className="form-control col-md-4" placeholder="שם משתמש" aria-label="Recipient's username" aria-describedby="basic-addon2" required=""></input>
                         </div>
                         <div className="form-group form-row text-right">
                             <label htmlFor="email" className="col-md-2">אי-מייל</label>
-                            <input type="text" className="form-control col-md-4" placeholder="michaeljana@gmail.com" aria-label="Recipient's email" aria-describedby="basic-addon2" required=""></input>
+                            <input type="text" className="form-control col-md-4" placeholder="כתובת מייל שנמצאת" aria-label="Recipient's email" aria-describedby="basic-addon2" required=""></input>
                         </div>
-                        <div className="form-group form-row text-right">
+                        <div className="form-group form-row text-right ng-valid ng-valid-email" id="loginForm">
                             <label htmlFor="passwrd" className="col-md-2">סיסמה</label>
-                            <input type="text" className="form-control col-md-4" aria-label="Recipient's password" aria-describedby="basic-addon2" placeholder="******" required=""></input>
+                            <input type="password" className="form-control col-md-4 ng-valid ng-valid-email" aria-label="Recipient's password" aria-describedby="basic-addon2" required="" id="exampleInputPassword1" id="pwd"/>
                             <small id="emailHelp" className="text-right">
                                 <strong>
                                     דרישות מינימום לסיסמא תקינה: לפחות ספרה,
@@ -55,7 +54,7 @@ const SignUp = () => {
                                 <div className="form-check">
                                     <div className="form-row container">
                                         <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
-                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet0" ng-model="dietTypes[idx]" defaultChecked={true} />
+                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet0" ng-model="dietTypes[idx]" />
                                             <label className="form-check-label ng-binding" htmlFor="diet0">טבעוני </label>
                                         </div>
                                         <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
@@ -63,7 +62,7 @@ const SignUp = () => {
                                             <label className="form-check-label ng-binding" htmlFor="diet1">ללא גלוטן </label>
                                         </div>
                                         <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
-                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet2" ng-model="dietTypes[idx]" defaultChecked={true}  />
+                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet2" ng-model="dietTypes[idx]" />
                                             <label className="form-check-label ng-binding" htmlFor="diet2">כשר </label>
                                         </div>
                                         <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
@@ -71,15 +70,15 @@ const SignUp = () => {
                                             <label className="form-check-label ng-binding" htmlFor="diet3">ללא לקטוז</label>
                                         </div>
                                         <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
-                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet4" ng-model="dietTypes[idx]" defaultChecked={true}  />
+                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet4" ng-model="dietTypes[idx]" />
                                             <label className="form-check-label ng-binding" htmlFor="diet4">פרווה</label>
                                         </div>
                                         <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
-                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet5" ng-model="dietTypes[idx]" defaultChecked={true} />
+                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet5" ng-model="dietTypes[idx]" />
                                             <label className="form-check-label ng-binding" htmlFor="diet5">פליאו</label>
                                         </div>
                                         <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
-                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet6" ng-model="dietTypes[idx]" defaultChecked={true} />
+                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet6" ng-model="dietTypes[idx]" />
                                             <label className="form-check-label ng-binding" htmlFor="diet6">קטגוני</label>
                                         </div>
                                         <div className="col-lg-4 col-md-4 col-6 ng-scope" ng-repeat="(idx, diet) in dietTypeList" ng-show="isShowDiet(dietTypes[idx])">
@@ -87,7 +86,7 @@ const SignUp = () => {
                                             <label className="form-check-label ng-binding" htmlFor="diet7">צמחוני</label>
                                         </div>
                                         <div className="col-lg-4 col-md-4 col-6" ng-show="isShowDiet(dietTypes[idx])">
-                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet8" ng-model="dietTypes[idx]"/>
+                                            <input className="form-check-input ng-pristine ng-untouched ng-valid ng-empty" type="checkbox" value="" id="diet8" ng-model="dietTypes[idx]" />
                                             <label className="form-check-label ng-binding" htmlFor="diet8">רואו</label>
                                         </div>
                                     </div>
@@ -95,7 +94,12 @@ const SignUp = () => {
                             </checkbox-list>
                         </div>
                         <div className="row text-right">
-                            <button type="button" className="btn btn-primary" onClick={goToAllReceiptsMy}>עדכן פרטים</button>
+                            <div className="col-8">
+                                <button type="button" className="btn btn-primary" style={{ padding: "10px 20px" }} onClick={goToAllRecipesMy}>רישום</button>
+                                <a className="alert alert-info ng-binding" role="alert">
+                                    לפני שליחת הטופס יש למלא בצורה תקינה את השדות
+                                </a>
+                            </div>
                         </div>
                         {/* <div class="form-group form-row">
                             <div class="float-left">
@@ -111,7 +115,9 @@ const SignUp = () => {
                     </div>
                     <div className="col-md-1"></div>
                 </div>
-                <div className="row"><p style={{ height: "140px" }}></p></div>
+                <div className="row"><p style={{ height: "135px" }}></p></div>
+                {/* <div className="jumbotron container-fluid" style={{ backgroundcolor: "nocolor" }}></div> */}
+                {/* <div className="jumbotron container-fluid"></div> */}
             </div>
         </>
     );

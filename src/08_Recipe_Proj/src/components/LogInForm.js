@@ -61,11 +61,11 @@ const LogInForm = () => {
 
     const history = useHistory();
 
-    const goToAllReceiptsMy = () => {
+    const goToAllRecipesMy = () => {
         history.push("/mainLogedIn");
     };
     
-    const goToAllReceipts = () => {
+    const goToAllRecipes = () => {
         history.push("/mainNotLogedIn");
     };
 
@@ -73,7 +73,7 @@ const LogInForm = () => {
         // <BrowserRouter>
             <div className="container-fluid">
                 <NavbarExternal />
-                {/* <form id="loginForm" className="ng-pristine ng-valid ng-valid-email" style={{backgroundImage: `url(${require("../images/back_ReceiptList1.jpg")})`,}}> */}
+                {/* <form id="loginForm" className="ng-pristine ng-valid ng-valid-email" style={{backgroundImage: `url(${require("../images/back_RecipeList1.jpg")})`,}}> */}
                 <form id="loginForm" className="ng-pristine ng-valid ng-valid-email">
                     <div className="row"><p style={{ height: "200px" }}></p></div>
                     <div className="form-group text-right">
@@ -86,8 +86,8 @@ const LogInForm = () => {
                         <input type="password" className="form-control" id="exampleInputPassword1" id="pwd" dir="rtl" />
                     </div>
                     <div className="btn-toolbar" dir="rtl">
-                        <button type="button" id="btnClose" className="btn btn-primary" onClick={goToAllReceipts}>סגור</button>
-                        <button type="button" id="btnEnter" className="btn btn-primary" onClick={goToAllReceiptsMy}>כניסה</button>
+                        <button type="button" id="btnClose" className="btn btn-primary" onClick={goToAllRecipes}>סגור</button>
+                        <button type="button" id="btnEnter" className="btn btn-primary" onClick={goToAllRecipesMy}>כניסה</button>
                     </div>
                     <div className="row"><p style={{ height: "330px" }}></p></div>
                 </form>

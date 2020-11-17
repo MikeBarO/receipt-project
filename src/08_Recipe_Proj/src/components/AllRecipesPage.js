@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import LogInForm from './LogInForm';
-import ReceiptSearch from './ReceiptSearch';
-import ReceiptCardMy from './ReceiptCardMy';
+import ReceiptSearch from './RecipeSearch';
+import ReceiptCard from './RecipeCard';
 import data from '../data/data';
 
-const AllReceiptsMy = () => {
+const AllReceiptsPage = () => {
     const [cardsInfo, setCardsInfo] = useState(data.sort((user1, user2) => user2.views - user1.views));
 
     const changeView = (cardId) => {
@@ -26,6 +26,9 @@ const AllReceiptsMy = () => {
     return (
         <>
             <div className="main">
+                {/* <div className="container-fluid">
+                    <LogInForm />
+                </div> */}
                 <div className="container">
                     <div className='row'>
                         <ReceiptSearch />
@@ -35,7 +38,7 @@ const AllReceiptsMy = () => {
                 <div className="container">
                     <div className='row' dir="rtl">
                         {
-                            cardsInfo.map(card => <ReceiptCardMy key={card.id} card={card} onChangeView={changeView} />)
+                            cardsInfo.map(card => <ReceiptCard key={card.id} card={card} onChangeView={changeView} />)
                         }
                     </div>
                 </div>
@@ -44,4 +47,4 @@ const AllReceiptsMy = () => {
     );
 }
 
-export default AllReceiptsMy;
+export default AllReceiptsPage;
